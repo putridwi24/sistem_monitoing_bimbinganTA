@@ -85,7 +85,7 @@
 													<td style="max-width: 1rem;">
 														<?php if (isset($mahasiswa->status)) : ?>
 															<small class="badge badge-info text-wrap text-left">
-																<?= $mahasiswa->status ?> Lorem ipsum dolor sit amet consectetur adipisicing elit. In, sint.
+																<?= $mahasiswa->status ?>
 															</small>
 														<?php else : ?>
 															<small><strong>Belum ditentukan</strong></small>
