@@ -84,7 +84,7 @@
 													</td>
 													<td style="max-width: 1rem;">
 														<?php if (isset($mahasiswa->status)) : ?>
-															<small class="badge badge-info text-wrap text-left">
+															<small class="badge text-wrap text-left">
 																<?= $mahasiswa->status ?>
 															</small>
 														<?php else : ?>
@@ -101,7 +101,9 @@
 													<td>
 														<span>
 															<?php if ($mahasiswa->dosbing_1) : ?>
+															<small class="badge badge-info text-wrap text-left">
 																<?= $mahasiswa->dosbing_1->user->name ?>
+															</small>
 															<?php else : ?>
 																<small><strong>Belum ditentukan</strong></small>
 															<?php endif ?>
@@ -109,7 +111,9 @@
 														<br>
 														<span>
 															<?php if ($mahasiswa->dosbing_2) : ?>
+															<small class="badge badge-info text-wrap text-left">
 																<?= $mahasiswa->dosbing_2->user->name ?>
+															</small>
 															<?php else : ?>
 																<small><strong>Belum ditentukan</strong></small>
 															<?php endif ?>
