@@ -75,7 +75,7 @@
 													</td>
 													<td style="max-width: 1rem;">
 														<?php if (isset($mahasiswa->status)) : ?>
-															<small class="badge badge-info text-wrap text-left">
+															<!-- <small class="badge badge-info text-wrap text-left"> -->
 																<?= $mahasiswa->status ?>
 															</small>
 														<?php else : ?>
