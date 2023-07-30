@@ -101,6 +101,7 @@ defined('TABEL_KARTU_KENDALI') or define('TABEL_KARTU_KENDALI', 'kartu_kendalis'
 defined('TABEL_REGISTER_STATUS') or define('TABEL_REGISTER_STATUS', 'register_statuses');
 defined('TABEL_REGISTER_STAGE') or define('TABEL_REGISTER_STAGE', 'register_stages');
 defined('TABEL_PROGRES') or define('TABEL_PROGRES', 'progres');
+defined('TABEL_FILES') or define('TABEL_FILES', 'files');
 
 defined('PROGRES_STATUS_INIT') or define('PROGRES_STATUS_INIT', 'init');
 defined('PROGRES_STATUS_PROSES') or define('PROGRES_STATUS_PROSES', 'proses');
@@ -140,3 +141,6 @@ defined('ATTACHMENT_URL') or define('ATTACHMENT_URL', '/storage/uploads/notifica
 defined('UPLOAD_PATH_BIMBINGAN') or define('UPLOAD_PATH_BIMBINGAN', FCPATH . '/storage/uploads/bimbingans/');
 defined('URL_BIMBINGAN_ATTACHMENT') or define('URL_BIMBINGAN_ATTACHMENT', '/storage/uploads/bimbingans/');
 defined('UPLOAD_PATH_TMP') or define('UPLOAD_PATH_TMP', FCPATH . '/storage/tmp/');
+
+defined('UPLOAD_PATH_DOCUMENTS') or define('UPLOAD_PATH_DOCUMENTS', FCPATH . '/storage/uploads/documents/');
+defined('URL_DOCUMENTS') or define('URL_DOCUMENTS', '/storage/uploads/documents/');
