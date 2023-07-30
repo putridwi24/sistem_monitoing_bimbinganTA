@@ -136,10 +136,18 @@ $route['timeline/(:num)'] = 'timeline/show/$1';
 $route['dosen/timeline/update']['post'] = 'dosen/timeline/update';
 // <<<<< timeline
 
-// - kartu kendali
+// >>>>> kartu kendali
 $route['kartu_kendali'] = 'kartu_kendali/index';
 $route['kartu_kendali/create'] = 'kartu_kendali/create';
 $route['kartu_kendali/(:num)'] = 'kartu_kendali/show/$1';
 $route['kartu_kendali/(:num)/edit'] = 'kartu_kendali/edit_mahasiswa/$1';
 $route['kartu_kendali/sign/request']['post'] = 'kartu_kendali/sign_request';
 $route['kartu_kendali/sign']['post'] = 'kartu_kendali/sign';
+// <<<<< kartu kendali
+
+// >>>>>> dokumen 
+$route['dokumen'] = 'file/dokumen';
+$route['dokumen/all'] = 'file/index_tim_ta';
+$route['dokumen/add'] = 'file/create';
+$route['dokumen/delete'] = 'file/delete';
+// <<<<<< dokumen
