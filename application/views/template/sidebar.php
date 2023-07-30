@@ -148,6 +148,13 @@ if (!isset($role)) $role = $this->role_model->get_role_id($user->role)->name;
 							<p>Timeline Laporan</p>
 						</a>
 					</li>
+					<li class="nav-item">
+						<a href="<?= base_url('dokumen') ?>" class="nav-link 
+						<?= $menu_name === 'dokumen' ? 'active' : '' ?>">
+							<i class="fa fa-file nav-icon"></i>
+							<p>Dokumen Pendukung</p>
+						</a>
+					</li>
 				<?php
 				} ?>
 
@@ -198,6 +205,13 @@ if (!isset($role)) $role = $this->role_model->get_role_id($user->role)->name;
 							<p>Mahasiswa Saya</p>
 						</a>
 					</li>
+					<li class="nav-item">
+						<a href="<?= base_url('dokumen') ?>" class="nav-link 
+						<?= $menu_name === 'dokumen' ? 'active' : '' ?>">
+							<i class="fa fa-file nav-icon"></i>
+							<p>Dokumen Pendukung</p>
+						</a>
+					</li>
 				<?php
 				} ?>
 
@@ -230,6 +244,13 @@ if (!isset($role)) $role = $this->role_model->get_role_id($user->role)->name;
 					<?= $menu_name == 'pengaturan_pengumuman' ? 'active' : '' ?>">
 							<i class="fas fa-bullhorn nav-icon"></i>
 							<p>Pengumuman</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="<?= base_url('dokumen/all') ?>" class="nav-link 
+						<?= $menu_name === 'dokumen_tim' ? 'active' : '' ?>">
+							<i class="fa fa-file nav-icon"></i>
+							<p>Dokumen Pendukung</p>
 						</a>
 					</li>
 				<?php } ?>
