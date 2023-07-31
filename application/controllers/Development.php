@@ -54,6 +54,9 @@ class Development extends CI_Controller
 		if (!mysqli_query($con, 'DROP TABLE IF EXISTS ' . TABEL_PROGRES)) {
 			die(mysqli_error($con));
 		}
+		if (!mysqli_query($con, 'DROP TABLE IF EXISTS ' . TABEL_FILES)) {
+			die(mysqli_error($con));
+		}
 		if (!mysqli_query($con, 'SET foreign_key_checks=1')) {
 			die(mysqli_error($con));
 		}
@@ -231,6 +234,17 @@ class Development extends CI_Controller
 			mahasiswa_nim VARCHAR(20) NOT NULL,
 			progres_data JSON DEFAULT NULL,
 			FOREIGN KEY(mahasiswa_nim) REFERENCES " . TABEL_MAHASISWA . "(nim)
+			)";
+		if (!mysqli_query($con, $query)) {
+			die(mysqli_error($con));
+		}
+
+		$query = "CREATE TABLE " . TABEL_FILES . " (
+			id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+			created_at DATETIME NOT NULL DEFAULT NOW(),
+			updated_at DATETIME DEFAULT NULL,
+			file_name VARCHAR(200) NOT NULL, 
+			description VARCHAR(200) DEFAULT NULL
 			)";
 		if (!mysqli_query($con, $query)) {
 			die(mysqli_error($con));
@@ -445,5 +459,42 @@ class Development extends CI_Controller
 		];
 		if (!$this->db->insert_batch(TABEL_KARTU_KENDALI, $pengumuman)) {
 		}
+	}
+
+	public function applyDocument()
+	{
+		$con = mysqli_connect(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD);
+		if (!$con) {
+			die("Connection failed" . mysqli_connect_error());
+		}
+
+		if (!mysqli_query($con, 'USE ' . DB_NAME)) {
+			die(mysqli_error($con));
+		}
+
+		// CLEAR DATABASE
+		if (!mysqli_query($con, 'SET foreign_key_checks=0')) {
+			die(mysqli_error($con));
+		}
+		if (!mysqli_query($con, 'DROP TABLE IF EXISTS ' . TABEL_FILES)) {
+			die(mysqli_error($con));
+		}
+		if (!mysqli_query($con, 'SET foreign_key_checks=1')) {
+			die(mysqli_error($con));
+		}
+
+		// CREATE DATABASES  
+		$query = "CREATE TABLE " . TABEL_FILES . " (
+			id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+			created_at DATETIME NOT NULL DEFAULT NOW(),
+			updated_at DATETIME DEFAULT NULL,
+			file_name VARCHAR(200) NOT NULL, 
+			description VARCHAR(200) DEFAULT NULL
+			)";
+		if (!mysqli_query($con, $query)) {
+			die(mysqli_error($con));
+		}
+
+		mysqli_close($con);
 	}
 }
