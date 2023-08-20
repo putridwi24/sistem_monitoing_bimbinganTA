@@ -319,7 +319,7 @@ class Development extends CI_Controller
 				'value' => (44.45)
 			],
 			[
-				'name' => 'Bab V',
+				'name' => 'Bab V <p> (Abstrak, Lampiran, dll</p>',
 				'code_name' => 'bab_5',
 				'value' => (22.22)
 			],

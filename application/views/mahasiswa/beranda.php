@@ -67,6 +67,11 @@
 											<?php } ?>
 										</div>
 									</div>
+									<p class="pb-2">
+										<span style="color: orange;">Kuning-> Proses;</span>
+										<span style="color: red;">Merah-> Revisi;</span>
+										<span style="color: green;">Hijau-> Disetujui</span>
+									</p>
 								</div>
 							</div>
 						</section>
@@ -88,7 +93,7 @@
 		</div>
 		<!-- /.content-wrapper -->
 		<footer class="main-footer">
-			<strong>Copyright &copy; Sistem Monitoring Bimbingan Tugas Akhir ITERA
+			<strong>Copyright &copy; _put_DL) Sistem Monitoring Bimbingan Tugas Akhir IF ITERA
 			</strong>
 			<div class="float-right d-none d-sm-inline-block">
 				<b>Version</b> 3.2.0

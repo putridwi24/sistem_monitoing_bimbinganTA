@@ -118,6 +118,7 @@ if (is_file(FCPATH . 'konfigurasi.php')) {
 	defined('DB_USERNAME') or define('DB_USERNAME', 'root');
 	defined('DB_PASSWORD') or define('DB_PASSWORD', '');
 	defined('DB_NAME') or define('DB_NAME', 'sistem_monitoring_ta');
+	defined('ENABLE_EMAIL') or define('ENABLE_EMAIL', true);
 }
 defined('SIMOTA_PASSWORD_DEFAULT') or define('SIMOTA_PASSWORD_DEFAULT', 'password');
 defined('SIMOTA_AVATAR_DEFAULT') or define('SIMOTA_AVATAR_DEFAULT', 'default.png');

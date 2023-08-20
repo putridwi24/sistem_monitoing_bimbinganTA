@@ -147,7 +147,7 @@ $this->load->view('template/head', [
 		</div>
 		<!-- /.content-wrapper -->
 		<footer class="main-footer">
-			<strong>Copyright &copy; Sistem Monitoring Bimbingan Tugas Akhir ITERA
+			<strong>Copyright &copy; Sistem Monitoring Bimbingan Tugas Akhir IF ITERA
 			</strong>
 			<div class="float-right d-none d-sm-inline-block">
 				<b>Version</b> 3.2.0
